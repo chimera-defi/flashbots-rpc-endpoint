@@ -100,7 +100,7 @@ func (r *RpcRequest) handle_sendRawTransaction() {
 	}
 
 	// Check if transaction needs protection
-	needsProtection := r.doesTxNeedFrontrunningProtection(r.tx)
+	needsProtection := true
 	r.ethSendRawTxEntry.NeedsFrontRunningProtection = needsProtection
 	// If users specify a bundle ID, cache this transaction
 	if r.isWhitehatBundleCollection {
