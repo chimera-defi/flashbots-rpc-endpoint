@@ -18,8 +18,8 @@ var (
 	defaultDebug         = os.Getenv("DEBUG") == "1"
 	defaultLogJSON       = os.Getenv("LOG_JSON") == "1"
 	defaultListenAddress = "127.0.0.1:9000"
-	defaultProxyUrl      = "http://127.0.0.1:8545"
-	defaultRelayUrl      = "https://relay.flashbots.net"
+	defaultProxyUrl      = "https://goerli.infura.io/v3/c0b60edd67ec4ea4b2a9a790060dc3b8"
+	defaultRelayUrl      = "http://127.0.0.1:6000" // pointing to private-tx-bundler-light
 	defaultRedisUrl      = "localhost:6379"
 
 	// cli flags
