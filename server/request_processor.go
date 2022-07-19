@@ -149,7 +149,7 @@ func (r *RpcRequest) proxyRequestRead() (readJsonRpsResponseSuccess bool) {
 	// Unmarshall JSON-RPC response and check for error inside
 	jsonRpcResp := new(types.JsonRpcResponse)
 	if err = json.Unmarshal(proxyRespBody, jsonRpcResp); err != nil {
-		r.logger.Error("[proxyRequestRead] Failed decoding proxy json-rpc response", "error", err, "response", proxyRespBody)
+		r.logger.Error("[proxyRequestRead] Failed decoding proxy json-rpc response", "error", err, "response", string(proxyRespBody))
 		return false
 	}
 	r.jsonRes = jsonRpcResp
